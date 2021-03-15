@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Garden.destroy_all if Rails.env.development?
+
+Garden.create!(
+  name: 'My little garden',
+  banner_url: 'https://www.gardeningknowhow.com/wp-content/uploads/2007/03/flowers-1.jpg'
+)
+
+Garden.create!(
+  name: 'My other garden',
+  banner_url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200'
+)
